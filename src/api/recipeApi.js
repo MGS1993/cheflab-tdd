@@ -7,7 +7,7 @@ const getSearchedRecipes = async () => {
     );
     const data = await response.json();
     // console.log(data);
-    return data.results;
+    return data;
   } catch (error) {
     console.log(error);
   }
