@@ -1,13 +1,16 @@
+import { useEffect } from "react";
 import "./App.css";
 import recipeApi from "./api/recipeApi";
+import useApi from "./hooks/useApi";
 
 function App() {
-  const test = async () => {
-    const test = await recipeApi.getSearchedRecipes();
-    console.log(test);
-  };
+  const { data, error, loading, request } = useApi(
+    recipeApi.getSearchedRecipes
+  );
 
-  // test();
+  useEffect(() => {
+    request("cheese");
+  }, []);
 
   return <div className="App"></div>;
 }
