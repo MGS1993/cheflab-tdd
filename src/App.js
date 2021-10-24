@@ -4,15 +4,15 @@ import recipeApi from "./api/recipeApi";
 import useApi from "./hooks/useApi";
 
 function App() {
-  const { data, error, loading, request } = useApi(
-    recipeApi.getSearchedRecipes
-  );
+  // const { data, error, loading, request } = useApi(
+  //   recipeApi.getSearchedRecipes
+  // );
 
-  useEffect(() => {
-    request("cheese");
-  }, []);
+  // useEffect(() => {
+  //   request("cheese");
+  // }, []);
 
-  return <div className="App"></div>;
+  return <div className="App">test2</div>;
 }
 
 export default App;
