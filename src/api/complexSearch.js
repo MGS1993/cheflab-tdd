@@ -1,6 +1,6 @@
 const apiKey = "9fa8dd3b19244df2adee6c9d771d7dd4";
 
-const getSearchedRecipes = async (query) => {
+const complexSearch = async (query) => {
   try {
     const response = await fetch(
       `https://api.spoonacular.com/recipes/complexSearch?&query=${query}&apiKey=${apiKey}`
@@ -13,4 +13,4 @@ const getSearchedRecipes = async (query) => {
   }
 };
 
-export default { getSearchedRecipes };
+export default complexSearch;

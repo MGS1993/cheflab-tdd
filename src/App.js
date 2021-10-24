@@ -1,18 +1,16 @@
-import { useEffect } from "react";
+// import { useEffect } from "react";
 import "./App.css";
-import recipeApi from "./api/recipeApi";
-import useApi from "./hooks/useApi";
+import RecipeCard from "./components/ui/RecipeCard";
+import recipeMock from "./mock/recipeMock";
 
 function App() {
-  // const { data, error, loading, request } = useApi(
-  //   recipeApi.getSearchedRecipes
-  // );
+  const baseApiRecipe = recipeMock.results[0];
 
-  // useEffect(() => {
-  //   request("cheese");
-  // }, []);
-
-  return <div className="App">test2</div>;
+  return (
+    <div className="App">
+      <RecipeCard title={baseApiRecipe} imgSrc={baseApiRecipe.image} />
+    </div>
+  );
 }
 
 export default App;

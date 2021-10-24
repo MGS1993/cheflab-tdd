@@ -1,7 +1,7 @@
 import { rest } from "msw";
 import { setupServer } from "msw/node";
 
-import recipeMock from "../mock/recipeMock";
+import recipeMock from "../src/mock/recipeMock";
 
 const server = setupServer(
   rest.get(
