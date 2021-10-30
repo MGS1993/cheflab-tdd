@@ -1,17 +1,17 @@
-// import { useEffect } from "react";
 import "./App.css";
+
 import Feed from "./components/Feed";
 import Header from "./components/ui/Header";
-import RecipeCard from "./components/ui/RecipeCard";
 import recipeMock from "./mock/recipeMock";
+import ReactRouter from "./ReactRoutes";
 
 function App() {
-  const baseApiRecipe = recipeMock.results[0];
+  // const baseApiRecipe = recipeMock.results[0];
 
   return (
     <div className="App">
       <Header />
-      <Feed items={recipeMock.results} quantity={10} />
+      <ReactRouter />
     </div>
   );
 }
