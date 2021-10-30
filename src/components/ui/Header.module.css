@@ -1,0 +1,13 @@
+.mainWrapper {
+  align-items: center;
+  background-color: dodgerblue;
+  display: flex;
+  height: 6vh;
+  justify-content: center;
+  min-height: 60px;
+}
+
+h1 {
+  color: white;
+  font-family: "Roboto", sans-serif;
+}
