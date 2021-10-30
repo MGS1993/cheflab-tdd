@@ -6,6 +6,7 @@ import recipeById from "../api/recipeById";
 //mocked api call
 import data from "../mock/recipeByIdMock";
 import useApi from "../hooks/useApi";
+import ImageComponent from "../components/ui/ImageComponent";
 
 const RecipeView = () => {
   // const { itemId } = useParams();
@@ -22,7 +23,11 @@ const RecipeView = () => {
       <div className={styles.titleWrap}>
         <p data-testid="title-test">{data.title}</p>
       </div>
-      <img id="img" src={data.image} alt={`still of ${data.title}`} />
+      <ImageComponent
+        id="img"
+        src={data.image}
+        alt={`Still of ${data.title}`}
+      />
     </div>
   );
 };
