@@ -1,17 +1,19 @@
 import "./App.css";
 
-import Feed from "./components/Feed";
 import Header from "./components/ui/Header";
-import recipeMock from "./mock/recipeMock";
 import ReactRouter from "./ReactRoutes";
+import recipeMock from "./mock/recipeMock";
+
+import RecipeView from "./Pages/RecipeView";
 
 function App() {
-  // const baseApiRecipe = recipeMock.results[0];
+  const baseApiRecipe = recipeMock.results[0];
 
   return (
     <div className="App">
       <Header />
       <ReactRouter />
+      {/* <RecipeView /> */}
     </div>
   );
 }

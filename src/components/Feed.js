@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import RecipeCard from "./ui/RecipeCard";
 
 const Feed = ({ items, quantity }) => {
@@ -6,7 +7,9 @@ const Feed = ({ items, quantity }) => {
 
   for (let i = 0; i < quantity; i++) {
     feedList.push(
-      <RecipeCard key={i} title={items[i].title} imgSrc={items[i].image} />
+      <Link key={i} to={`recipeView/${items[i].id}`}>
+        <RecipeCard title={items[i].title} imgSrc={items[i].image} />
+      </Link>
     );
   }
 
