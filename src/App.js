@@ -1,5 +1,6 @@
 // import { useEffect } from "react";
 import "./App.css";
+import Feed from "./components/Feed";
 import Header from "./components/ui/Header";
 import RecipeCard from "./components/ui/RecipeCard";
 import recipeMock from "./mock/recipeMock";
@@ -10,7 +11,7 @@ function App() {
   return (
     <div className="App">
       <Header />
-      {/* <RecipeCard title={baseApiRecipe.title} imgSrc={baseApiRecipe.image} /> */}
+      <Feed items={recipeMock.results} quantity={10} />
     </div>
   );
 }

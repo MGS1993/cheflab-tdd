@@ -3,6 +3,6 @@ import Header from "./Header";
 
 test("it renders the header", () => {
   render(<Header />);
-  const content = screen.queryByRole("header");
+  const content = screen.queryByTestId("header");
   expect(content).toBeDefined();
 });
