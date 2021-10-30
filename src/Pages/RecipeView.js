@@ -22,6 +22,7 @@ const RecipeView = () => {
       <div className={styles.titleWrap}>
         <p data-testid="title-test">{data.title}</p>
       </div>
+      <img id="img" src={data.image} alt={`still of ${data.title}`} />
     </div>
   );
 };
