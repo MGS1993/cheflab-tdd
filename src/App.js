@@ -2,12 +2,12 @@ import "./App.css";
 
 import Header from "./components/ui/Header";
 import ReactRouter from "./ReactRoutes";
-import recipeMock from "./mock/recipeMock";
+// import recipeMock from "./mock/recipeMock";
 
-import RecipeView from "./Pages/RecipeView";
+// import RecipeView from "./Pages/RecipeView";
 
 function App() {
-  const baseApiRecipe = recipeMock.results[0];
+  // const baseApiRecipe = recipeMock.results[0];
 
   return (
     <div className="App">

@@ -1,0 +1,11 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+}
+.titleWrap {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 20px 20px;
+  text-align: center;
+}
