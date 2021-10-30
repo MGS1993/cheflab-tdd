@@ -8,7 +8,9 @@ const RecipeCard = ({ title, imgSrc }) => {
         <img src={imgSrc ?? imgPlaceHolder} alt={`Still of ${title}`} />
       </div>
 
-      <div data-testid="info-test"></div>
+      <div data-testid="info-test" className={styles.infoWrapper}>
+        <p data-testid="title-test">{title}</p>
+      </div>
     </div>
   );
 };

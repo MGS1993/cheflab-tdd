@@ -1,9 +1,8 @@
-.mainWrapper {
-  background-color: green;
+.infoWrapper {
   display: flex;
   flex-direction: column;
-  height: 300px;
-  width: 350px;
+  padding: 10px 0px;
+  text-align: center;
 }
 
 .imageWrapper {
@@ -11,7 +10,16 @@
   justify-content: center;
 }
 
+/* img child */
 .imageWrapper > img {
   flex: 1;
   max-width: 90%;
+}
+
+.mainWrapper {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  width: 350px;
 }

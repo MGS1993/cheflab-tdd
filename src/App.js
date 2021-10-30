@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <RecipeCard title={baseApiRecipe} imgSrc={baseApiRecipe.image} />
+      <RecipeCard title={baseApiRecipe.title} imgSrc={baseApiRecipe.image} />
     </div>
   );
 }

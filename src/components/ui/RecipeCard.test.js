@@ -38,3 +38,12 @@ test("if no image or api image error, render placeholder", () => {
   );
   expect(<RecipeCard title={baseApiRecipe.title} imgSrc={imgPlaceHolder} />);
 });
+
+test("it renders name of recipe", () => {
+  render(
+    <RecipeCard title={baseApiRecipe.title} imgSrc={baseApiRecipe.image} />
+  );
+  const title = screen.queryByTestId("title-test");
+  expect(title).toBeDefined();
+  expect(title).toHaveTextContent(baseApiRecipe.title);
+});
