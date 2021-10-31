@@ -29,7 +29,7 @@ const RecipeView = () => {
       <div className={styles.titleWrap}>
         <p data-testid="title-test">{data.title}</p>
       </div>
-      <MealTime />
+      <MealTime servings={data.servings} mealTime={data.readyInMinutes} />
     </div>
   );
 };

@@ -1,5 +1,3 @@
-import "./App.css";
-
 import Header from "./components/ui/Header";
 import ReactRouter from "./ReactRoutes";
 // import recipeMock from "./mock/recipeMock";
