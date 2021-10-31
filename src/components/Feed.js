@@ -7,7 +7,11 @@ const Feed = ({ items, quantity }) => {
 
   for (let i = 0; i < quantity; i++) {
     feedList.push(
-      <Link key={i} to={`recipeView/${items[i].id}`}>
+      <Link
+        style={{ textDecoration: "none" }}
+        key={i}
+        to={`recipeView/${items[i].id}`}
+      >
         <RecipeCard title={items[i].title} imgSrc={items[i].image} />
       </Link>
     );
