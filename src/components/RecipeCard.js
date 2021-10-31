@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./RecipeCard.module.css";
-import imgPlaceHolder from "../../assets/no-image-placeholder.png";
+import imgPlaceHolder from "../assets/no-image-placeholder.png";
 const RecipeCard = ({ title, imgSrc }) => {
   return (
     <div

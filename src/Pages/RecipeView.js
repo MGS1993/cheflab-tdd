@@ -3,8 +3,8 @@ import styles from "./RecipeView.module.css";
 import { useParams } from "react-router";
 
 import data from "../mock/recipeByIdMock";
-import ImageComponent from "../components/ui/ImageComponent";
-import MealTime from "../components/ui/MealTime";
+import ImageComponent from "../components/ImageComponent";
+import MealTime from "../components/MealTime";
 // import recipeById from "../api/recipeById";
 //mocked api call
 // import useApi from "../hooks/useApi";

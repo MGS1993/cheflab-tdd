@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Enzyme, { shallow } from "enzyme";
 import Adapter from "enzyme-adapter-react-17-updated";
 
-import MealTime from "../components/ui/MealTime";
+import MealTime from "../components/MealTime";
 import RecipeView from "./RecipeView";
 
 import recipeMock from "../mock/recipeByIdMock";

@@ -1,4 +1,4 @@
-import Header from "./components/ui/Header";
+import Header from "./components/Header";
 import ReactRouter from "./ReactRoutes";
 // import recipeMock from "./mock/recipeMock";
 

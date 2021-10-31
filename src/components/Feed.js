@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import RecipeCard from "./ui/RecipeCard";
+import RecipeCard from "./RecipeCard";
 
 const Feed = ({ items, quantity }) => {
   const feedList = [];
