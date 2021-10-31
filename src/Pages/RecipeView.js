@@ -4,6 +4,7 @@ import { useParams } from "react-router";
 
 import data from "../mock/recipeByIdMock";
 import ImageComponent from "../components/ImageComponent";
+import IngredientList from "../components/IngredientList";
 import MealTime from "../components/MealTime";
 // import recipeById from "../api/recipeById";
 //mocked api call
@@ -30,6 +31,7 @@ const RecipeView = () => {
         <p data-testid="title-test">{data.title}</p>
       </div>
       <MealTime servings={data.servings} mealTime={data.readyInMinutes} />
+      <IngredientList data={data.analyzedInstructions[0].steps} />
     </div>
   );
 };
