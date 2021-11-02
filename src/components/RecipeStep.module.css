@@ -1,0 +1,23 @@
+.mainWrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+.spanWrapper {
+  display: flex;
+  height: 25px;
+  justify-content: center;
+  padding-right: 10px;
+  width: 25px;
+}
+.spanWrapper > :only-child {
+  height: 100%;
+  width: 100%;
+}
+.stepText {
+  align-items: center;
+  display: flex;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 0px;
+}

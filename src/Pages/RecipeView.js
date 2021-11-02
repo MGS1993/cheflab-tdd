@@ -12,15 +12,17 @@ import MealTime from "../components/MealTime";
 
 const RecipeView = () => {
   // const { itemId } = useParams();
+  // console.log(itemId);
 
   // const { data, error, loading, request } = useApi(recipeById);
 
+  // console.log(data);
   // useEffect(() => {
   //   request(itemId);
   //   console.log("use effect ran and api called");
   // }, []);
   // console.log(data);
-  return (
+  return data ? (
     <div className={styles.mainWrapper}>
       <ImageComponent
         id="img"
@@ -33,6 +35,8 @@ const RecipeView = () => {
       <MealTime servings={data.servings} mealTime={data.readyInMinutes} />
       <IngredientList data={data.analyzedInstructions[0].steps} />
     </div>
+  ) : (
+    <div></div>
   );
 };
 

@@ -1,9 +1,9 @@
 import { screen, render } from "@testing-library/react";
 
 import RecipeCard from "./RecipeCard";
-import recipeMock from "../../mock/recipeMock";
+import recipeMock from "../mock/recipeMock";
 
-import imgPlaceHolder from "../../assets/no-image-placeholder.png";
+import imgPlaceHolder from "../assets/no-image-placeholder.png";
 
 const baseApiRecipe = recipeMock.results[0];
 // console.log(baseApiRecipe);
