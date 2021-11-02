@@ -14,12 +14,26 @@ describe("IngredientList render", () => {
     expect(list).toBeDefined();
   });
 
+  test("it renders the main component where the ingredients will be shown", () => {
+    const wrapper = shallow(<IngredientList />);
+    expect(wrapper.find(".ingredientContainer").exists()).toBeTruthy();
+  });
+
+  test("it renders each ingredient needed for recipe", () => {
+    const wrapper = shallow(<IngredientList data={data.extendedIngredients} />);
+    expect(wrapper.find(".ingredientContainer")).toHaveLength(
+      data.extendedIngredients.length
+    );
+  });
+});
+
+describe("child components testing", () => {
   test("it renders all steps necessary for recipe", () => {
     const wrapper = shallow(
       <IngredientList data={data.analyzedInstructions[0].steps} />
     );
-    // console.log(wrapper.debug());
-    expect(wrapper.find("#ingredient-list").children()).toHaveLength(
+    console.log(wrapper.debug());
+    expect(wrapper.find("#ingredient-step").children()).toHaveLength(
       data.analyzedInstructions[0].steps.length
     );
   });

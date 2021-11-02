@@ -17,8 +17,9 @@ const IngredientList = ({ data }) => {
   // console.log(steps);
 
   return (
-    <div id="ingredient-list" className={styles.mainWrapper}>
-      {steps}
+    <div className={styles.mainWrapper}>
+      <div className={styles.ingredientContainer}></div>
+      <div id="ingredient-step">{steps}</div>
     </div>
   );
 };
