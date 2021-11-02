@@ -1,11 +1,14 @@
 import React from "react";
 import styles from "./IngredientList.module.css";
 
+import Ingredient from "./Ingredient";
 import RecipeStep from "./RecipeStep";
 
 const IngredientList = ({ data }) => {
-  // console.log("data in IngredientList", data);
-  const steps = data?.map((item, index) => {
+  const ingredients = data?.extendedIngredients.map((item, index) => {
+    return <Ingredient key={index + "a"} name={item.name} />;
+  });
+  const steps = data?.analyzedInstructions[0].steps.map((item, index) => {
     return (
       <RecipeStep
         key={index}
@@ -18,7 +21,7 @@ const IngredientList = ({ data }) => {
 
   return (
     <div className={styles.mainWrapper}>
-      <div className={styles.ingredientContainer}></div>
+      <div className={styles.ingredientContainer}>{ingredients}</div>
       <div id="ingredient-step">{steps}</div>
     </div>
   );

@@ -33,7 +33,7 @@ const RecipeView = () => {
         <p data-testid="title-test">{data.title}</p>
       </div>
       <MealTime servings={data.servings} mealTime={data.readyInMinutes} />
-      <IngredientList data={data.analyzedInstructions[0].steps} />
+      <IngredientList data={data} />
     </div>
   ) : (
     <div></div>
