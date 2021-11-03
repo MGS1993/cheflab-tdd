@@ -4,6 +4,7 @@ import Adapter from "enzyme-adapter-react-17-updated";
 
 import IngredientList from "./IngredientList";
 import data from "../mock/recipeByIdMock";
+import BackButton from "./BackButton";
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -34,5 +35,9 @@ describe("child components testing", () => {
     expect(wrapper.find("#ingredient-step").children()).toHaveLength(
       data.analyzedInstructions[0].steps.length
     );
+  });
+
+  test("it renders a back button that uses history to go back once the bottom of page is reached", () => {
+    const wrapper = shallow(<IngredientList data={data} />);
   });
 });

@@ -1,8 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./RecipeView.module.css";
 import { useParams } from "react-router";
+import { useHistory } from "react-router";
 
+import BackButton from "../components/BackButton";
 import data from "../mock/recipeByIdMock";
+import handleScroll from "../utility/handleScroll";
 import ImageComponent from "../components/ImageComponent";
 import IngredientList from "../components/IngredientList";
 import MealTime from "../components/MealTime";
@@ -11,6 +14,8 @@ import MealTime from "../components/MealTime";
 // import useApi from "../hooks/useApi";
 
 const RecipeView = () => {
+  const [atBottomPage, setAtBottomPage] = useState(false);
+  const history = useHistory();
   // const { itemId } = useParams();
   // console.log(itemId);
 
@@ -22,6 +27,14 @@ const RecipeView = () => {
   //   console.log("use effect ran and api called");
   // }, []);
   // console.log(data);
+
+  useEffect(() => {
+    window.addEventListener("scroll", () => handleScroll(setAtBottomPage));
+    return () => {
+      window.removeEventListener("scroll", () => handleScroll(setAtBottomPage));
+      console.log("removed scroll event listener");
+    };
+  }, []);
   return data ? (
     <div className={styles.mainWrapper}>
       <ImageComponent
@@ -34,6 +47,7 @@ const RecipeView = () => {
       </div>
       <MealTime servings={data.servings} mealTime={data.readyInMinutes} />
       <IngredientList data={data} />
+      <BackButton visibility={atBottomPage} clicked={() => history.goBack()} />
     </div>
   ) : (
     <div></div>
