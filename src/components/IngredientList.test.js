@@ -21,7 +21,7 @@ describe("IngredientList render", () => {
 
   test("it renders each ingredient needed for recipe", () => {
     const wrapper = shallow(<IngredientList data={data} />);
-    expect(wrapper.find(".ingredientContainer")).toHaveLength(
+    expect(wrapper.find(".ingredientContainer").children()).toHaveLength(
       data.extendedIngredients.length
     );
   });
