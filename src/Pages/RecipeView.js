@@ -10,14 +10,14 @@ import ImageComponent from "../components/ImageComponent";
 import IngredientList from "../components/IngredientList";
 import MealTime from "../components/MealTime";
 // import recipeById from "../api/recipeById";
-//mocked api call
+// mocked api call
 // import useApi from "../hooks/useApi";
 
 const RecipeView = () => {
   const [atBottomPage, setAtBottomPage] = useState(false);
   const history = useHistory();
-  // const { itemId } = useParams();
-  // console.log(itemId);
+  const { itemId } = useParams();
+  console.log(itemId);
 
   // const { data, error, loading, request } = useApi(recipeById);
 

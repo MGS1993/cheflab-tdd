@@ -1,5 +1,5 @@
-import { render, screen } from "@testing-library/react";
-import Enzyme, { shallow } from "enzyme";
+import { screen } from "@testing-library/react";
+import Enzyme, { shallow, render } from "enzyme";
 import Adapter from "enzyme-adapter-react-17-updated";
 
 import MealTime from "../components/MealTime";
@@ -12,7 +12,7 @@ Enzyme.configure({ adapter: new Adapter() });
 describe("RecipeView Testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(<RecipeView />);
+    wrapper = render(<RecipeView />);
   });
 
   test("it renders title", () => {
