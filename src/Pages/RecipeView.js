@@ -16,8 +16,8 @@ import MealTime from "../components/MealTime";
 const RecipeView = () => {
   const [atBottomPage, setAtBottomPage] = useState(false);
   const history = useHistory();
-  const { itemId } = useParams();
-  console.log(itemId);
+  // const { itemId } = useParams();
+  // console.log(itemId);
 
   // const { data, error, loading, request } = useApi(recipeById);
 

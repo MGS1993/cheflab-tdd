@@ -31,7 +31,7 @@ describe("IngredientList render", () => {
 describe("child components testing", () => {
   test("it renders all steps necessary for recipe", () => {
     const wrapper = shallow(<IngredientList data={data} />);
-    console.log(wrapper.debug());
+    // console.log(wrapper.debug());
     expect(wrapper.find("#ingredient-step").children()).toHaveLength(
       data.analyzedInstructions[0].steps.length
     );

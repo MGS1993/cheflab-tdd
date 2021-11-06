@@ -1,31 +1,28 @@
 import { screen } from "@testing-library/react";
-import Enzyme, { shallow, render } from "enzyme";
+import Enzyme, { shallow, render, mount } from "enzyme";
 import Adapter from "enzyme-adapter-react-17-updated";
 
+import customRender from "../utility/test-utils";
 import MealTime from "../components/MealTime";
 import RecipeView from "./RecipeView";
 
 import recipeMock from "../mock/recipeByIdMock";
+import { MemoryRouter } from "react-router";
 
 Enzyme.configure({ adapter: new Adapter() });
 
 describe("RecipeView Testing", () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = render(<RecipeView />);
+    wrapper = mount(
+      <MemoryRouter initialEntries={["/"]}>
+        <RecipeView />
+      </MemoryRouter>
+    );
   });
 
   test("it renders title", () => {
-    expect(wrapper.find("p").text()).toBeDefined();
-  });
-
-  test("render recipe image", () => {
-    expect(wrapper.find("#img").prop("src")).toBeDefined();
     // console.log(wrapper.debug());
-  });
-
-  test("it has a div with serving size amount and meal time", () => {
-    const wrapper = shallow(<MealTime />);
-    expect(wrapper.find("#serving-time").children()).toHaveLength(2);
+    expect(wrapper.find(RecipeView).find("#title-test")).toBeDefined();
   });
 });
